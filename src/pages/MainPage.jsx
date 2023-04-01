@@ -14,12 +14,12 @@ export default function MainPage() {
   const history = useHistory();
 
   useEffect(()  => {
-    Axios.post("https://nodejs-distroless-production-0531.up.railway.app/updates", {
+    Axios.post("server-production-c67f.up.railway.app/updates", {
       idUsuario: test,
     }).then((response) => {
       setDate(response.data[0]);
     });
-    Axios.post("https://nodejs-distroless-production-0531.up.railway.app/pontos", {
+    Axios.post("server-production-c67f.up.railway.app/pontos", {
       idUsuario: test,
     }).then((response) => {
       const pstInicial = Object.values(response.data[0]);
@@ -29,7 +29,7 @@ export default function MainPage() {
 
   const handleClick = () => {
     if (pts < 40) {
-      Axios.post("https://nodejs-distroless-production-0531.up.railway.app/ponto", {
+      Axios.post("server-production-c67f.up.railway.app/ponto", {
         idUsuario: test,
       }).then((response) => {
         if (response.data.msg === 'Total') {
@@ -39,7 +39,7 @@ export default function MainPage() {
           history.push('/watchVieos');
         }
       });
-      Axios.post("https://nodejs-distroless-production-0531.up.railway.app/pontos", {
+      Axios.post("server-production-c67f.up.railway.app/pontos", {
         idUsuario: test,
       }).then((response) => {
         const pstInicial = Object.values(response.data[0])
@@ -61,7 +61,7 @@ export default function MainPage() {
   const handleHabilit = () => {
   if (pts * 7.5 === 300) {
     history.push('/privete');
-    Axios.post("https://nodejs-distroless-production-0531.up.railway.app/compartilhar", {
+    Axios.post("server-production-c67f.up.railway.app/compartilhar", {
       idUsuario: test,
     });
   } else {
