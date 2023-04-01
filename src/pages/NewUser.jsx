@@ -35,7 +35,7 @@ export default function NewUser() {
   const handleClick = () => {
 
     if (check) {
-      Axios.post("server-production-c67f.up.railway.app/register", {
+      Axios.post("https://server-production-c67f.up.railway.app/register", {
         email: dateUser.emailNewUser,
         password: dateUser.passwordNewUser,
         cpf: dateUser.cpfNewUser,

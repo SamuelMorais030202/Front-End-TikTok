@@ -26,7 +26,7 @@ export default function Login (){
 
   const handleClick = () => {
     localStorage.removeItem('app');
-    Axios.post("server-production-c67f.up.railway.app/login", {
+    Axios.post("https://server-production-c67f.up.railway.app/login", {
       email: userLogin.email,
       password: userLogin.password,
     }).then((response) => {
