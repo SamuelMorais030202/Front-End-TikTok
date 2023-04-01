@@ -13,12 +13,12 @@ export default function Privete (){
 
   const test = localStorage.getItem('app');
   useEffect(()  => {
-    Axios.post("http://localhost:3004/updates", {
+    Axios.post("https://nodejs-distroless-production-0531.up.railway.app/updates", {
       idUsuario: test,
     }).then((response) => {
         setDate(response.data[0]);
       });
-    Axios.post("http://localhost:3004/pontos", {
+    Axios.post("https://nodejs-distroless-production-0531.up.railway.app/pontos", {
       idUsuario: test,
     }).then((response) => {
         const pstInicial = Object.values(response.data[0]);
@@ -31,7 +31,7 @@ export default function Privete (){
   }
 
   const newGame = () => {
-    Axios.post("http://localhost:3004/reset", {
+    Axios.post("https://nodejs-distroless-production-0531.up.railway.app/reset", {
       idUsuario: test,
     });
     history.push('/about');

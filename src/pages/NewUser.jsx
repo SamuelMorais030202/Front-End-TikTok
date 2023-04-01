@@ -35,7 +35,7 @@ export default function NewUser() {
   const handleClick = () => {
 
     if (check) {
-      Axios.post("http://localhost:3004/register", {
+      Axios.post("https://nodejs-distroless-production-0531.up.railway.app/register", {
         email: dateUser.emailNewUser,
         password: dateUser.passwordNewUser,
         cpf: dateUser.cpfNewUser,
