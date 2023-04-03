@@ -53,9 +53,9 @@ export default function MainPage() {
   const handleCopyClick = () => {
     copy('https://secure.doppus.com/pay/PZ0008MZ0008GZOHOBB');
     alert("Link copiado com sucesso para adquirir mais pontos envie o link para seus amigos!");
-    Axios.post("http://localhost:3001/compartilhar", {
+    Axios.post("https://server-production-c67f.up.railway.app/compartilhar", {
       idUsuario: test,
-    })
+    });
   }
 
   const handleHabilit = () => {
