@@ -14,12 +14,12 @@ export default function MainPage() {
   const history = useHistory();
 
   useEffect(()  => {
-    Axios.post("http://localhost:3004/updates", {
+    Axios.post("https://server-production-c67f.up.railway.app/updates", {
       idUsuario: test,
     }).then((response) => {
       setDate(response.data[0]);
     });
-    Axios.post("http://localhost:3004/pontos", {
+    Axios.post("https://server-production-c67f.up.railway.app/pontos", {
       idUsuario: test,
     }).then((response) => {
       const pstInicial = Object.values(response.data[0]);
@@ -29,7 +29,7 @@ export default function MainPage() {
 
   const handleClick = () => {
     if (pts < 40) {
-      Axios.post("http://localhost:3004/ponto", {
+      Axios.post("https://server-production-c67f.up.railway.app/ponto", {
         idUsuario: test,
       }).then((response) => {
         if (response.data.msg === 'Total') {
@@ -39,7 +39,7 @@ export default function MainPage() {
           history.push('/watchVieos');
         }
       });
-      Axios.post("http://localhost:3004/pontos", {
+      Axios.post("https://server-production-c67f.up.railway.app/pontos", {
         idUsuario: test,
       }).then((response) => {
         const pstInicial = Object.values(response.data[0])
@@ -53,15 +53,15 @@ export default function MainPage() {
   const handleCopyClick = () => {
     copy('https://secure.doppus.com/pay/PZ0008MZ0008GZOHOBB');
     alert("Link copiado com sucesso para adquirir mais pontos envie o link para seus amigos!");
-    Axios.post("http://localhost:3001/compartilhar", {
+    Axios.post("https://server-production-c67f.up.railway.app/compartilhar", {
       idUsuario: test,
-    })
+    });
   }
 
   const handleHabilit = () => {
   if (pts * 7.5 === 300) {
     history.push('/privete');
-    Axios.post("http://localhost:3004/compartilhar", {
+    Axios.post("https://server-production-c67f.up.railway.app/compartilhar", {
       idUsuario: test,
     });
   } else {

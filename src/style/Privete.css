@@ -43,13 +43,15 @@
 
 .name-privete {
   font-size: 14px;
-  color: rgb(255, 255, 255);
+  color: rgb(251, 43, 91);
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .pts-privete {
   font-size: 14px;
-  color: rgb(255, 255, 255);
+  color: rgb(251, 43, 91);
+  margin-top: 10px;
 }
 
 .div-regras {

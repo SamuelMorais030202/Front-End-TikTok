@@ -22,7 +22,7 @@ export default function Password() {
     const validate = dateUser.emailNewUser.includes('@')
       && dateUser.emailNewUser.includes('.com') && dateUser.cpfNewUser.length === 11
     if (validate) {
-      Axios.post("http://localhost:3004/esqueciSenha", {
+      Axios.post("https://server-production-c67f.up.railway.app/esqueciSenha", {
         email: dateUser.emailNewUser,
       });
       alert("Senha enviada, verifique seu email");

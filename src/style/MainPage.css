@@ -8,6 +8,7 @@
   width: 100vw;
   background-color: rgb(16, 65, 172, 0.842);
   background-image: url('../images/backgroundImg.jpeg');
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,5 +170,32 @@
     font-size: 14px;
     margin-top: 20px;
     width: 280px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-main-page {
+    background-color: rgba(255, 255, 255, 0.726);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 4px 2px 1px rgba(0, 0, 0, 0.507);
+    overflow: hidden;
+  }
+
+  .header-main-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 110px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 400px;
   }
 }
